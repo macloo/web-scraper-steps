@@ -1,0 +1,63 @@
+My scraping project
+
+What I want to do:
+Scrape all players from http://www.mlssoccer.com/players
+There are about 500 players.
+
+Why:
+I want to answer some questions such as:
+Who is the youngest player?
+Who is the oldest player?
+What are all the Twitter handles of all the players?
+Which country has produced the most MLS players?
+How many different teams have U.S.-born players?
+
+Step 1: 
+
+Get the URLs for each player detail page.
+Players are listed on pages with URLs of this type:
+http://www.mlssoccer.com/players
+http://www.mlssoccer.com/players?page=1
+http://www.mlssoccer.com/players?page=2
+Last page:
+http://www.mlssoccer.com/players?page=20
+
+Player detail pages have URLs like this:
+http://www.mlssoccer.com/players/anatole-abang
+http://www.mlssoccer.com/players/alex
+http://www.mlssoccer.com/players/jeremy-gagnon-lapare
+
+Step 2:
+Get the following data for each player:
+
+Name 		ex. Jeremy Gagnon-Lapare
+Team 		ex. Montreal Impact
+Position 	ex. Midfielder
+Birthplace	ex. Sherbrooke, QC
+Birthday	ex. 20 (03/09/1995)
+Twitter		NOT ALL HAVE THIS
+
+All info in 
+div class player-container
+
+Inside that:
+div class title (text) player's full name
+div class club (text) team
+div class position (text) position
+
+div class player_info_alternate
+
+birthday
+<div class="player_meta">
+<div class="age"><span class="category">Age:</span>
+23 (10/21/1992)</div>
+
+birthplace
+<div class="hometown"><span class="category">Birthplace:</span>
+Barranquilla, Colombia</div>
+
+twitter
+<div class="twitter_handle"><a href="https://twitter.com/Olmesgarcia13" class="twitter_link">@Olmesgarcia13</a></div>
+
+
+
