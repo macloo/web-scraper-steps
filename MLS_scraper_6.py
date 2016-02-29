@@ -48,7 +48,7 @@ def get_player_details(player_list):
         player_details = []
         title = bsObj.find( "div", {"class":"title"} )
         team = bsObj.find( "div", {"class":"club"} )
-        position = bsObj.find( "div", {"class":"position"} )
+        position = bsObj.find( "span", {"class":"position"} )
         birthday = bsObj.find( "div", {"class":"age"} )
         # <div class="age"><span class="category">Age:</span>
         # 23 (10/21/1992)</div>
@@ -78,4 +78,4 @@ def get_player_details(player_list):
 get_player_pages(html, bsObj)
 get_player_details(player_list)
 # close CSV file
-c.close()
+csvfile.close()
